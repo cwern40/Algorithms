@@ -14,8 +14,6 @@ def recipe_batches(recipe, ingredients):
     
   return min(batches)
 
-print(recipe_batches({ 'milk': 2, 'sugar': 40, 'butter': 20 }, { 'milk': 5, 'sugar': 120, 'butter': 500 }))
-
 if __name__ == '__main__':
   # Change the entries of these dictionaries to test 
   # your implementation with different inputs
