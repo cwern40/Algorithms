@@ -5,11 +5,13 @@ import sys
 def making_change(amount, denominations):
   if amount == 0:
     return 1
+
+  if amount < 0:
+    return 0
   
   total = 0
-  for i in range(0, len(denominations) - 1):
-    if amount >= denominations[i]:
-      total += making_change(amount-denominations[i], denominations)
+  for i in range(0, len(denominations)):
+    total += making_change(amount - denominations[i], denominations)
   
   return total
 
