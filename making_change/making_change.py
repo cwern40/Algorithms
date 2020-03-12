@@ -3,7 +3,16 @@
 import sys
 
 def making_change(amount, denominations):
-  pass 
+  change = [0 for i in range(amount + 1)]
+
+  change[0] = 1
+
+  for value in denominations:
+    for more in range(1, amount + 1):
+      if value <= more:
+        change[more] += change[more - value]
+
+  return change[amount]
 
 
 if __name__ == "__main__":
